@@ -1,13 +1,26 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.scss';
 
+import './App.scss';
+import Home from "./component/home/Home"
+import Community from "./component/community/Community"
+import Cart from './component/cart/Cart'
+import My from './component/my/My'
+import TabBar from './component/tabbar/TabBar'
+import { HashRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
 function App() {
   return (
     <div className="App">
-      <div className="header">
-        123
-      </div>
+      <Router>
+        <Switch>
+          <Route path='/' exact render={() => <TabBar><Home></Home></TabBar>}></Route>
+          <Route path='/Community' exact render={() => <TabBar><Community></Community></TabBar>}></Route>
+          <Route path='/Cart' exact render={() => <TabBar><Cart></Cart></TabBar>}></Route>
+          <Route path='/My' exact render={() => <TabBar><My></My></TabBar>}></Route>
+          <Redirect to='/'></Redirect>
+        </Switch>
+        
+        {/* <TabBar></TabBar> */}
+      </Router>
     </div>
   );
 }

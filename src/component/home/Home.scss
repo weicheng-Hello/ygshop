@@ -1,0 +1,43 @@
+.ygshop-index {
+    .ygshop-index-header {
+        width: 100vw;
+        height: 50px;
+        background-color: var(--themeColor);
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 101;
+      i.icon.icon-menu {
+  
+      }
+  
+      span.header-mindle {
+        font-size: 20px;
+        color: white;
+      }
+  
+      i.icon.icon-soso {
+  
+      }
+    }
+    .yg-index-slider {
+      margin-top: 50px;
+      width: 100vw;
+      height: 160px;
+      .swiper-container {
+        .swiper-wrapper {
+          .swiper-slide {
+            width: 100vw;
+            img {
+              width: 100%;
+              height: 160px;
+            }
+          }
+        }
+      }
+    }
+  }

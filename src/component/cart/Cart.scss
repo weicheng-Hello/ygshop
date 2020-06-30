@@ -1,0 +1,100 @@
+.yg-cart {
+    .yg-cart-header {
+        width: 100vw;
+        height: 50px;
+        background-color: var(--themeColor);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-right:10px;
+      i.icon.icon-return {
+  
+      }
+  
+      .cart-title {
+          font-size: 20px;
+        color: white;
+      }
+  
+       .right{
+           color: white;
+           font-size: 18px;
+       } 
+    }
+    .yg-cart-list {
+        .list-search {
+            width: 100vw;
+            height: 45px;
+            border-bottom: 1px solid #ddd;/* no */
+            display: flex;
+            align-items: center;
+          input {
+            width: 25px;
+            height: 25px;
+            border: 1px solid #ddd/* no */;
+            margin: 0 10px;
+          }
+      
+          img {
+            width: 30px;
+            height: 30px;
+            vertical-align: middle;
+            margin-right: 10px;
+          }
+          .cart-name{
+            font-size: 16px;
+            // color: #909090;
+          }
+        }
+        .cart-item {
+            padding: 10px;
+            display: flex;
+            .left {
+              img {
+                width: 96px;
+                height: 96px;
+              }
+            }
+          
+            .middle {
+                display: flex;
+                flex-direction: column;
+                margin-left: 5px;
+                align-items: left;
+                justify-content: center;
+              .commodity-name {
+                font-size: 18px;
+              }
+          
+              .commodity-color {
+                color: #909090;
+                font-size: 14px;
+              }
+          
+              .commodity-price {
+                  color: var(--themeColor);
+                  font-size: 18px;
+                  display: flex;
+                  justify-content: space-between;
+                .commodity-num {
+                    display: flex;
+                  .icon.norms-out {
+                    background-size: 200px 200px;
+                    background-position: -106px -4px;
+
+                  }
+          
+                  .num {
+          
+                  }
+          
+                  .icon.norms-add {
+                    background-size: 200px 200px;
+                    background-position: -106px -25px;
+                  }
+                }
+              }
+            }
+          }
+      }
+  }

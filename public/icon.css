@@ -103,3 +103,19 @@
     background-position: -120px -250px;
     background-size: 280px 280px;
 }
+.icon-addcommunity{
+    background-position: -320px -175px;
+    background-size: 350px 350px;
+}
+.icon-share{
+    background-position: -320px -142px;
+    background-size: 350px 350px;
+}
+.norms-add{
+    background-position: -106px -25px;
+    background-size: 350px 350px;
+}
+.norms-out{
+    background-size: 350px 350px;
+    background-position: -106px -4px;
+}

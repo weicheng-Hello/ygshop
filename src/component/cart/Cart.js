@@ -13,7 +13,8 @@ export default class Cart extends Component {
                 </div>
                 <div className="yg-cart-list">
                     <div className="list-search">
-                        <input type="radio" name="" id="" />
+                        {/* <input type="radio" name="" id="" /> */}
+                        <i className="icon icon-radio"></i>
                         <img src={Shop1} alt="" />
                         <span className='cart-name'>海绵包包</span>
                     </div>
@@ -24,15 +25,20 @@ export default class Cart extends Component {
                         <div className="middle">
                             <span className='commodity-name'>首款海绵包包</span>
                             <span className='commodity-color'>颜色:黑色</span>
-                            <span className='commodity-price'>￥68.00
+                            <span className='commodity-price'>
+                                <span className='price'>￥68.00</span>
                                 <div className="commodity-num">
-                                    <span className="icon norms-out"></span>
+                                    <i className="icon icon-sub"></i>
                                     <span className='num'>1</span>
-                                    <span className="icon norms-add"></span>
+                                    <i className="icon icon-add"></i>
                                 </div>
                             </span>
                         </div>
                     </div>
+                </div>
+                <div className='yg-cart-settlement'>
+                    <div className="settlement-left">合计：￥68.00</div>
+                    <div className="settlement-right">去结算</div>
                 </div>
             </div>
         )

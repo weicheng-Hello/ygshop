@@ -26,7 +26,7 @@ export default class Community extends Component {
                     </div>
                     <div className="content-foot">
                         <span className='left'>刚刚</span>
-                        <i class="icon icon-share"></i>
+                        <i className="icon icon-share"></i>
                     </div>
                 </div>
                 <div className="community-comtent">
@@ -42,7 +42,7 @@ export default class Community extends Component {
                     </div>
                     <div className="content-foot">
                         <span className='left'>刚刚</span>
-                        <i class="icon icon-share"></i>
+                        <i className="icon icon-share"></i>
                     </div>
                 </div>
             </div>

@@ -1,0 +1,65 @@
+.user-login {
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../../image/login.jpg");
+    background-repeat: no-repeat;
+    .title{
+        width: 100vw;
+        color: black;
+        text-align: center;
+        
+    }
+    .login{
+        padding:30px;
+        margin-top: 10%;
+    .login-name {
+
+      input {
+        width: 100%;
+        height: 30px;
+        padding-left:10px;
+        border: none;
+        border-bottom: 1px solid #ddd;/* no */
+        outline: medium;
+        margin-bottom: 20px;
+        border-radius: 15px;
+      }
+    }
+  
+    .login-pwd {
+      input {
+        width: 100%;
+        height: 30px;
+        padding-left:10px;
+        border: none;
+        border-bottom: 1px solid #ddd;/* no */
+        outline: medium;
+        margin-bottom: 20px;
+        border-radius: 15px;
+      }
+    }
+  
+    .login-btn {
+        width: 100%;
+        height:40px;
+        color: white;
+        font-size: 18px;
+        text-align: center;
+        border-radius: 20px;
+        line-height: 40px;
+        background-color: var(--themeColor);
+        margin-bottom: 20px;
+    }
+  
+    .login-register {
+        width: 100%;
+        height:40px;
+        color: white;
+        text-align: center;
+        border-radius: 20px;
+        line-height: 40px;
+        font-size: 18px;
+        background-color: var(--themeColor);
+    }
+}
+  }

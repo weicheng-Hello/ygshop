@@ -111,11 +111,27 @@
     background-position: -320px -142px;
     background-size: 350px 350px;
 }
-.norms-add{
-    background-position: -106px -25px;
-    background-size: 350px 350px;
+.icon-f1{
+    background-position: 0 -250px;
+    background-size: 280px 280px;
 }
-.norms-out{
-    background-size: 350px 350px;
-    background-position: -106px -4px;
+.icon-f2{
+    background-position: -32px -250px;
+    background-size: 280px 280px;
+}
+.icon-f3{
+    background-position: -64px -250px;
+    background-size: 280px 280px;
+}
+.icon-f4{
+    background-position: -92px -250px;
+    background-size: 280px 280px;
+}
+.icon-f5{
+    background-position: -120px -250px;
+    background-size: 280px 280px;
+}
+.icon-select{
+    background-size: 220px 220px;
+    background-position: -163px -5px;
 }

@@ -7,6 +7,14 @@ import './TabBar.scss'
      }
      componentDidMount(){
         let activeTab = window.location.hash.split('/')[1]
+        if(activeTab === '' || activeTab === 'community' || activeTab === 'cart' || activeTab === 'my'){
+            if(activeTab === ''){
+                activeTab ='home'
+            }
+            this.setState({
+                activeTab
+            })
+        }
      }
      //Tab点击事件
      handleTabChange = (tab) =>{

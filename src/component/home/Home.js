@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import {withRouter} from 'react-router-dom'
 import './Home.scss'
 import axios from '../../utils/axios'
 import Swiper from "swiper"
@@ -12,7 +13,7 @@ import Scyh0 from "../../image/scyh0.jpg"
 import Scyh1 from "../../image/scyh1.png"
 import Scyh3 from "../../image/scyh3.png"
 import Scyh4 from "../../image/scyh4.png"
-export default class Home extends Component {
+ class Home extends Component {
     state = {
         swiper_list: [],//轮播图列表
         product_list:[]//商品列表
@@ -48,6 +49,9 @@ export default class Home extends Component {
                 })
             })
         }).catch(err => console.log(err))
+    }
+    handleDetails = (parame) => {
+        this.props.history.push('/Details')
     }
     render() {
         return (
@@ -126,7 +130,7 @@ export default class Home extends Component {
                 </div>
                 <div className="yg-index-jxcx-product">
                     {this.state.product_list.map((v,key) => {
-                        return <div className='product-item' key={key}>
+                        return <div className='product-item' key={key} onClick={this.handleDetails}>
                             <img src={v.product_url} alt=""/>
                             <h1>{v.product_name}</h1>
                             <span className='nowPrice'>￥{v.product_price}</span>
@@ -139,3 +143,4 @@ export default class Home extends Component {
         )
     }
 }
+export default withRouter(Home)

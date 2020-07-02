@@ -15,6 +15,15 @@ class My extends Component {
     handleClick = (params) => {
         this.props.history.push('/Login')
     }
+    componentDidMount(){
+        let useInfo =JSON.parse(localStorage.getItem('userInfo'))
+        console.log(useInfo)
+        if(useInfo.oauth_token){
+            this.setState({
+                isLogin:true
+            })
+        }
+    }
     render() {
         return (
             <div className='yg-my'>
@@ -28,7 +37,7 @@ class My extends Component {
                     </div>:
                     <div className="user-login">
                     <img src={MyBj} alt="" />
-                    <div className="user-login-btn" onClick={this.handleClick}>未登录</div>
+                    <div className="user-login-btn" onClick={this.handleClick}>登录</div>
                     </div>
                 }
                 </div>

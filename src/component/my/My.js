@@ -16,13 +16,15 @@ class My extends Component {
         this.props.history.push('/Login')
     }
     componentDidMount(){
-        let useInfo =JSON.parse(localStorage.getItem('userInfo'))
-        console.log(useInfo)
-        if(useInfo.oauth_token){
+        // let useInfo =JSON.parse(localStorage.getItem('userInfo'))
+        // console.log(useInfo)
+        // console.log(useInfo)
+        if (JSON.parse(localStorage.getItem('userInfo'))){
             this.setState({
                 isLogin:true
             })
         }
+        console.log(this.state.isLogin)
     }
     render() {
         return (

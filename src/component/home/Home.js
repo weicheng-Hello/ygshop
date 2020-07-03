@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import {withRouter} from 'react-router-dom'
 import './Home.scss'
 import axios from '../../utils/axios'
+import Axios from "axios"
 import Swiper from "swiper"
 import "swiper/css/swiper.css"
 import Nav01 from "../../image/nav01.png"
@@ -14,20 +15,31 @@ import Scyh1 from "../../image/scyh1.png"
 import Scyh3 from "../../image/scyh3.png"
 import Scyh4 from "../../image/scyh4.png"
  class Home extends Component {
+    constructor(props){
+        super(props);
+        const CancelToken = Axios.CancelToken;
+        this.source = CancelToken.source();
+    }
+    componentWillMount(){
+        this.swiper = null
+        this.source.cancel('Operation canceled by the user.')
+    }
     state = {
         swiper_list: [],//轮播图列表
         product_list:[]//商品列表
     }
     componentDidMount() {
-        axios.get('getProducts').then(res => {
+        
+        axios.get('getHotProducts'
+        ).then(res => {
             
             this.setState({
                 product_list:res.wdata
             })
-            console.log(this.state.product_list)
+
         }).catch(err => console.log(err))
         axios.get('getIndexLoopimg').then(res => {
-            // console.log(res)
+            console.log(res)
             this.setState({
                 swiper_list: res.wdata
             }, () => {
@@ -50,9 +62,7 @@ import Scyh4 from "../../image/scyh4.png"
             })
         }).catch(err => console.log(err))
     }
-    handleDetails = (parame) => {
-        this.props.history.push('/Details')
-    }
+    
     render() {
         return (
             <div className='ygshop-index'>
@@ -130,12 +140,16 @@ import Scyh4 from "../../image/scyh4.png"
                 </div>
                 <div className="yg-index-jxcx-product">
                     {this.state.product_list.map((v,key) => {
-                        return <div className='product-item' key={key} onClick={this.handleDetails}>
+                        return (<div className='product-item' key={key} onClick={(patams) => {
+                            //跳转到详情页面
+                            this.props.history.push('/product/'+v.pid)
+                            
+                        }}>
                             <img src={v.product_url} alt=""/>
                             <h1>{v.product_name}</h1>
                             <span className='nowPrice'>￥{v.product_price}</span>
                             <span className='originPrice'>￥{v.product_origin_price}</span>
-                        </div>
+                        </div>)
                     })}
                 </div>
                 {/* 首页精选促销结束 */}

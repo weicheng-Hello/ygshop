@@ -8,7 +8,7 @@ import My from './component/my/My'
 import Login from "./component/login/Login"
 import TabBar from './component/tabbar/TabBar'
 import Register from './component/register/Register'
-import Details from './component/details/Details'
+import Product from './component/product/Product'
 import { HashRouter as Router, Route, Redirect, Switch } from 'react-router-dom'
 function App() {
   return (
@@ -21,7 +21,7 @@ function App() {
           <Route path='/My' exact render={() => <TabBar><My></My></TabBar>}></Route>
           <Route path='/Login' exact render={() => <Login></Login>}></Route>
           <Route path='/Register' exact render={() => <Register></Register>}></Route>
-          <Route path='/Details/:id' exact render={() => <Details></Details>}></Route>
+          <Route path='/Product/:productId' exact render={() => <Product></Product>}></Route>
           <Redirect to='/'></Redirect>
         </Switch>
         

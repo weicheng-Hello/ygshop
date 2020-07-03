@@ -14,6 +14,10 @@ import './TabBar.scss'
             this.setState({
                 activeTab
             })
+        }else{
+            this.setState({
+                activeTab:"home"
+            })
         }
      }
      //Tab点击事件

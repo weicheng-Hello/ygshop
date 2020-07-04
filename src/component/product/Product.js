@@ -3,6 +3,7 @@ import {withRouter} from "react-router-dom"
 import "./Product.scss"
 import tel from "../../image/tel.png"
 import axios from "../../utils/axios"
+
 class Product extends Component {
     
     state ={
@@ -26,6 +27,13 @@ class Product extends Component {
             })
         }).catch(err => console.log(err))
     }  
+    //加入购物车
+    addToCart = (params) => {
+        axios.post('updateCarts',{
+            active:'add',productNumber:1,pid:this.pid
+        })
+    }
+    
     render() {
         return (
             <div className='yg-product'>
@@ -40,7 +48,7 @@ class Product extends Component {
                     </div>
                     <span className="content-name">{this.state.productDetail.product_name}</span>
                     <div className="content-price">
-                        <span className="now-price">{this.state.productDetail.product_price}</span>
+                        <span className="now-price">￥{this.state.productDetail.product_price}</span>
                         <span className="orgin-price">{this.state.productDetail.product_origin_price}</span>
                     </div>
                     <div className="product-content-spec">
@@ -51,6 +59,7 @@ class Product extends Component {
                         <img src={tel} alt=""/>
                         <span className="content-tel-number">{this.state.productDetail.call}</span>
                     </div>
+                    <div className="content-img" dangerouslySetInnerHTML={{__html:this.state.productDetail.product_desc}}></div>
                 </div>
                 <div className="yg-product-tool">
                     <div className="product-tool-left">

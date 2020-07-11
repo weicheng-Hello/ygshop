@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let arr = [1,2,3,4,5,6,5,3,4,2]
+        for(let i=0;i<arr.length;i++){
+            for(let j = i+1;j<arr.length;j++){
+                if(arr[i] === arr[j]){
+                    arr.splice(j,1)
+                }
+                
+                
+            }
+        }
+        console.log(arr)
+        let arr1 = [1,2,3,4,3,2,1]
+        let arr2 = [...new Set(arr1)]
+        console.log(arr2)
+    </script>
+</body>
+</html>
